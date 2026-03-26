@@ -1,10 +1,14 @@
-# Use Java 17
 FROM eclipse-temurin:17-jdk-alpine
 
 WORKDIR /app
 
 COPY . .
 
-RUN ./mvnw clean package -DskipTests
+# Install Maven
+RUN apk add --no-cache maven
 
+# Build project
+RUN mvn clean package -DskipTests
+
+# Run app
 CMD ["java", "-jar", "target/*.jar"]
