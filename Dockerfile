@@ -11,4 +11,4 @@ RUN apk add --no-cache maven
 RUN mvn clean package -DskipTests
 
 # Run app
-CMD ["java", "-jar", "target/*.jar"]
+CMD ["java", "-jar", "target/email-writer-sb-0.0.1-SNAPSHOT.jar"]
