@@ -14,7 +14,7 @@ function App() {
     setLoading(true);
     setError('');
     try {
-      const response = await axios.post("http://localhost:8081/api/email/generate", {
+      const response = await axios.post("https://intelligent-email-response-system-with-ju4k.onrender.com/", {
        emailContent,
        tone 
       });
